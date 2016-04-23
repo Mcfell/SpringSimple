@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd
+     http://www.springframework.org/schema/tx 
+     http://www.springframework.org/schema/tx/spring-tx.xsd">
+     
+     <!-- @Configuration 标注的类定义为普通的 <bean>，同时注册处理注解的 Bean 后处理器.@Configuration 注解本身也用 @Component 标注了-->
+     <!--  
+     <beans>
+	    <context:annotation-config/>
+	    <bean class="com.mvtest.config" />
+	 </beans> 
+	 -->
+	 
+	 <!-- Spring 将扫描所有 com.mvtest.SpringSimple 包及其子包中的类，识别所有标记了 @Component、@Controller、@Service、@Repository注解的类 -->
+     <!-- @Component是通用标注，@Controller标注web控制器，@Service标注Servicec层的服务，@Respository标注DAO层的数据访问 -->
+     <context:component-scan base-package="com.mvtest.SpringSimple"></context:component-scan>
+</beans>

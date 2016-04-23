@@ -1,0 +1,6 @@
+com\mvtest\SpringSimple\A.class
+com\mvtest\spring\BeanFactory.class
+com\mvtest\SpringSimple\base.class
+com\mvtest\SpringSimple\C.class
+com\mvtest\spring\ClassPathXmlApplicationContext.class
+com\mvtest\SpringSimple\B.class
