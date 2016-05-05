@@ -5,6 +5,9 @@ import java.io.InputStream;
 import java.net.URL;
 
 
+
+
+
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -12,6 +15,12 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
 
+
+
+
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
+import org.dom4j.util.XMLErrorHandler;
 import org.xml.sax.SAXException;
 
 
@@ -34,7 +43,7 @@ public class JobConfigXMLValidateTest {
       * @date 2014年4月2日 下午4:25:39
       */
      public static void validateXMLByXSD() throws SAXException {
-         /* String xmlFileName = "shiporder.xml" ;
+          String xmlFileName = "shiporder.xml" ;
           String xsdFileName = "personSchema.xsd" ;
            // 建立schema工厂
           SchemaFactory schemaFactory = SchemaFactory
@@ -67,6 +76,6 @@ public class JobConfigXMLValidateTest {
               ;
           } catch (Exception ex) {
               ex.printStackTrace();
-          }*/
+          }
      }
 }
